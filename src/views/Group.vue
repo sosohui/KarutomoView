@@ -1,15 +1,15 @@
 <template>
   <v-container>
-    <Main></Main>
+    <Group></Group>
   </v-container>
 </template>
 
 <script>
-  import Main from '../components/Main'
+  import Group from '../components/Group'
 
   export default {
     components: {
-      Main
+      Group
     }
   }
 </script>

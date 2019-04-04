@@ -1,15 +1,19 @@
 <template>
   <v-container>
-    <Main></Main>
+      <h1>Group</h1>
   </v-container>
 </template>
 
 <script>
-  import Main from '../components/Main'
-
   export default {
-    components: {
-      Main
+    data() {
+      return {
+
+      }
     }
   }
 </script>
+
+<style>
+
+</style>

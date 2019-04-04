@@ -1,15 +1,15 @@
 <template>
   <v-container>
-    <Main></Main>
+    <Collection></Collection>
   </v-container>
 </template>
 
 <script>
-  import Main from '../components/Main'
+  import Collection from '../components/Collection'
 
   export default {
     components: {
-      Main
+      Collection
     }
   }
 </script>

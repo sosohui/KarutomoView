@@ -16,7 +16,7 @@
         <span class="m-2">Home</span>
       </v-btn>
       <v-btn
-        :to="{name: 'collection'}"
+        :to="{name: 'EverycardCollection'}"
         flat
       >
         <span class="m-2">Collection</span>
@@ -52,7 +52,7 @@
     <!-- <v-content>
       <HelloWorld/>
     </v-content> -->
-    <v-footer class="pa-3" color="green">
+    <v-footer class="pa-3" color="#56895b">
       <v-flex
       text-xs-center
       white--text
@@ -61,7 +61,6 @@
       </v-flex>
   </v-footer>
   </v-app>
-
 </template>
 
 <script>

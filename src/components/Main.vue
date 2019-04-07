@@ -1,9 +1,9 @@
 <template>
   <v-container>
      <b-carousel
-      id="carousel-1"
+      id="carousel"
       v-model="slide"
-      :interval="1500"
+      :interval="150000000"
       controls
       indicators
       background="#ababab"
@@ -76,7 +76,7 @@
       Sliding: {{ sliding }}
     </p> -->
 
-    <div class="m-5">
+    <div class="mt-5 mb-3">
       <h2 class="text-center">What is Karutomo?</h2>
     </div>
 
@@ -105,8 +105,10 @@
       <h2 class="text-center">추천 카드</h2>
     </div>
 
-
-    <v-layout justify-center class="m-3">
+    <v-layout
+      justify-center
+      class="m-3"
+    >
       <v-flex xs12>
         <v-container
           fluid
@@ -119,8 +121,9 @@
               v-bind="{ [`xs${card.flex}`]: true }"
             >
               <v-card
-                color="green"
+                color="#60a25d"
                 class="white--text m-3"
+                style="max-width: 21rem;"
               >
               <v-layout>
                 <v-flex xs5>
@@ -131,13 +134,22 @@
                     height="175px"
                   ></v-img>
                 </v-flex>
-                <v-flex xs7>
-                  <v-card-title primary-title>
-                    <div>
-                      <div class="headline">Supermodel</div>
-                      <div>Foster the People</div>
-                      <div>(2014)</div>
-                    </div>
+                <v-flex xs12>
+                  <v-card-title
+                    primary-title
+                    class="p-2"
+                  >
+                    <h4>{{ card.title }}</h4>
+                    <div>{{ card.context }}</div>
+                    <div>#{{ card.tag }}</div>
+                    <v-btn small color="success" class="ml-5">구독하러가기</v-btn>
+                      <span class="mx-1 mt-1">
+                        <v-icon>remove_red_eye</v-icon>
+                        <span class="mx-2">{{ card.hits }}</span>
+                        <v-icon>star_border</v-icon>
+                        <span class="mx-2">{{ card.hits }}</span>
+                      </span>
+
                   </v-card-title>
                 </v-flex>
               </v-layout>
@@ -147,6 +159,7 @@
         </v-container>
       </v-flex>
     </v-layout>
+
 
   </v-container>
 </template>
@@ -158,9 +171,9 @@
         slide: 0,
         sliding: null,
         cards: [
-          { title: 'Pre-fab homes', src: require('../assets/로빈.jpg'), flex: 4.5 },
-          { title: 'Favorite road trips', src: require('../assets/에이스.jpg'), flex: 4.5 },
-          { title: 'Best airlines', src: require('../assets/조로.jpg'), flex: 4.5 }
+          { title: '로빈 카루타', src: require('../assets/로빈.jpg'), context: '원피스 로빈 카루타입니다', tag: '원피스' , hits: 30, flex: 4.5 },
+          { title: '에이스 카루타', src: require('../assets/에이스.jpg'), context: '원피스 에이스 카루타입니다', tag: '원피스', hits: 30, flex: 4.5 },
+          { title: '조로 카루타', src: require('../assets/조로.jpg'), context: '원피스 조로 카루타입니다', tag: '원피스', hits: 30, flex: 4.5 }
         ]
       }
     },

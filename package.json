@@ -11,6 +11,8 @@
     "@chenfengyuan/vue-carousel": "^1.0.1",
     "bootstrap": "^4.3.1",
     "bootstrap-vue": "^2.0.0-rc.16",
+    "mdbootstrap": "^4.7.6",
+    "mdbvue": "^5.1.2",
     "vue": "^2.6.10",
     "vue-button-effect": "0.0.3",
     "vue-router": "^3.0.1",

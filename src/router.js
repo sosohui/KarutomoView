@@ -2,6 +2,7 @@ import Vue from "vue";
 import Router from "vue-router";
 import Home from "./views/Home.vue";
 import EverycardCollection from "./views/Everycard_Collection.vue";
+import MycardCollection from "./views/Mycard_Collection.vue";
 import Group from "./views/Group.vue";
 
 
@@ -22,6 +23,11 @@ export default new Router({
       path: "/EverycardCollection",
       name: "EverycardCollection",
       component: EverycardCollection
+    },
+    {
+      path: "/MycardCollectiony",
+      name: "MycardCollection",
+      component: MycardCollection
     },
     {
       path: "/group",

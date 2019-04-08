@@ -16,7 +16,7 @@
         <span class="m-2">Home</span>
       </v-btn>
       <v-btn
-        :to="{name: 'EverycardCollection'}"
+        :to="{name: 'NycardCollection'}"
         flat
       >
         <span class="m-2">Collection</span>

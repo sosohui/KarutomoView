@@ -11,7 +11,6 @@ import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 import vueButtonEffect from 'vue-button-effect'
 
-
 Vue.use(vueButtonEffect)
 
 Vue.use(BootstrapVue)

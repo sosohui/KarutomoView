@@ -1,7 +1,6 @@
 <template>
   <v-container>
     <cardSelect></cardSelect>
-
     <v-flex xs12>
         <v-container
           fluid

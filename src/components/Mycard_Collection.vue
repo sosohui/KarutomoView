@@ -1,11 +1,14 @@
 <template>
   <v-container>
     <cardSelect></cardSelect>
-
+    <div class="m-3">
+      <div class="title font-weight-black">내가 제작한 카드</div>
+    </div>
     <v-flex xs12>
         <v-container
           fluid
           grid-list-md
+          class="pt-0"
         >
           <v-layout
             row
@@ -18,9 +21,78 @@
             >
               <v-card
                 color="#60a25d"
-                class="white--text m-3"
+                class="white--text m-2"
                 style="max-width: 21rem;"
-                v-if="index < 2"
+                v-if="index < 3"
+              >
+                <v-layout
+                  v-if="index < 2"
+                >
+                  <v-flex xs5>
+                    <v-img
+                      :src="card.src"
+                      contain
+                      width="125px"
+                      height="175px"
+                    ></v-img>
+                  </v-flex>
+                  <v-flex xs12>
+                    <v-card-title
+                      primary-title
+                      class="p-2"
+                    >
+                      <h4>{{ card.title }}</h4>
+                      <div>{{ card.context }}</div>
+                      <div>#{{ card.tag }}</div>
+                      <v-btn small color="success" class="ml-5 px-4">자세히보기</v-btn>
+                        <span class="mx-1 mt-1">
+                          <v-icon>remove_red_eye</v-icon>
+                          <span class="mx-2">{{ card.hits }}</span>
+                          <v-icon>star_border</v-icon>
+                          <span class="mx-2">{{ card.hits }}</span>
+                        </span>
+                    </v-card-title>
+                  </v-flex>
+                </v-layout>
+                <v-layout
+                  white
+                  no-shadow
+                >
+                  <mdb-btn
+                    outline="dark-green"
+                    class="p-2"
+                    v-if="index > 1"
+                  >
+                  <span class="px-4"><span class="px-5"><v-icon x-large class="px-5">add</v-icon></span></span></mdb-btn>
+                </v-layout>
+              </v-card>
+            </v-flex>
+          </v-layout>
+        </v-container>
+      </v-flex>
+
+      <div class="m-3">
+      <div class="title font-weight-black">내가 제작한 카드</div>
+    </div>
+    <v-flex xs12>
+        <v-container
+          fluid
+          grid-list-md
+          class="pt-0"
+        >
+          <v-layout
+            row
+            wrap
+          >
+            <v-flex
+              v-for="card in cards"
+              :key="card.title"
+              v-bind="{ [`xs${card.flex}`]: true }"
+            >
+              <v-card
+                color="#60a25d"
+                class="white--text m-2"
+                style="max-width: 21rem;"
               >
               <v-layout>
                 <v-flex xs5>
@@ -51,10 +123,11 @@
               </v-layout>
               </v-card>
             </v-flex>
-            <mdb-btn outline="dark-green"><span class="px-4"><span class="px-5"><v-icon x-large class="px-5">add</v-icon></span></span></mdb-btn>
           </v-layout>
         </v-container>
       </v-flex>
+
+
 
 
       <div>

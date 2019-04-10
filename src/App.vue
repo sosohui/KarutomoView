@@ -9,49 +9,33 @@
         ></v-img>
       </v-toolbar-title>
       <v-spacer></v-spacer>
-      <v-btn
-        :to="{name: 'home'}"
-        flat
-      >
-        <span class="m-2">Home</span>
-      </v-btn>
-      <v-btn
-        :to="{name: 'NycardCollection'}"
-        flat
-      >
-        <span class="m-2">Collection</span>
-      </v-btn>
-      <v-btn
-        :to="{name: 'group'}"
-        flat
-      >
-        <span class="m-2">Group</span>
-      </v-btn>
-      <v-dialog v-model="dialog" persistent max-width="290">
-      <template v-slot:activator="{ on }">
+      <v-layout justify-end>
         <v-btn
-          v-on="on"
+          :to="{name: 'home'}"
+          flat
         >
-          User
+          <span class="m-2">Home</span>
         </v-btn>
-      </template>
-      <v-card>
-        <v-card-title class="headline">Login?</v-card-title>
-        <v-card-text>Login</v-card-text>
-        <v-card-actions>
-          <v-spacer></v-spacer>
-          <v-btn color="green darken-1" flat @click="dialog = false">Disagree</v-btn>
-          <v-btn color="green darken-1" flat @click="dialog = false">Agree</v-btn>
-        </v-card-actions>
-      </v-card>
-    </v-dialog>
+        <v-btn
+          :to="{name: 'MycardCollection'}"
+          flat
+        >
+          <span class="m-2">Collection</span>
+        </v-btn>
+        <v-btn
+          :to="{name: 'group'}"
+          flat
+        >
+          <span class="m-2">Group</span>
+        </v-btn>
+        <loginModal/>
+      </v-layout>
+
+
     </v-toolbar>
     <v-content>
       <router-view/>
     </v-content>
-    <!-- <v-content>
-      <HelloWorld/>
-    </v-content> -->
     <v-footer class="pa-3" color="#56895b">
       <v-flex
       text-xs-center
@@ -64,13 +48,13 @@
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld'
+import loginModal from './components/login_Modal'
 
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    loginModal
   },
   data () {
     return {

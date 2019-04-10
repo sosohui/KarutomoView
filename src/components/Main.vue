@@ -149,7 +149,6 @@
                         <v-icon>star_border</v-icon>
                         <span class="mx-2">{{ card.hits }}</span>
                       </span>
-
                   </v-card-title>
                 </v-flex>
               </v-layout>
